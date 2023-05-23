@@ -8,22 +8,26 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>selfheart</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.运行时数据区域（内存模型）Java 内存区域和内存模型是不一样的东西： 内存区域是指 Jvm 运行时将数据分区域存储，强调对内存空间的划分。内存模型（Java Memory Model，简称 JMM ）是定义了线程和主内存之间的抽象关系，即 JMM 定义了 JVM 在计算机内存(RAM)中的工作方式，如果我们要想深入了解Java并发编程，就要先理解好Java内存模型。主要的运行时数据如下：">
+  <meta name="description" content="加解密  1、openssl1.1、openssl下载以下为Windows安装openssl示例： 1.1.1 下载地址 官方下载地址： https:&#x2F;&#x2F;www.openssl.org&#x2F;source&#x2F; OpenSSL官网没有提供windows版本的安装包，可以选择其他开源平台提供的工具。例如 http:&#x2F;&#x2F;slproweb.com&#x2F;products&#x2F;Win32OpenSSL.html1.1.2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="selfheart">
-<meta property="og:url" content="http://example.com/2023/05/23/jvm%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:url" content="http://example.com/2023/05/23/%E5%8A%A0%E8%A7%A3%E5%AF%86/index.html">
 <meta property="og:site_name" content="selfheart">
-<meta property="og:description" content="1.运行时数据区域（内存模型）Java 内存区域和内存模型是不一样的东西： 内存区域是指 Jvm 运行时将数据分区域存储，强调对内存空间的划分。内存模型（Java Memory Model，简称 JMM ）是定义了线程和主内存之间的抽象关系，即 JMM 定义了 JVM 在计算机内存(RAM)中的工作方式，如果我们要想深入了解Java并发编程，就要先理解好Java内存模型。主要的运行时数据如下：">
+<meta property="og:description" content="加解密  1、openssl1.1、openssl下载以下为Windows安装openssl示例： 1.1.1 下载地址 官方下载地址： https:&#x2F;&#x2F;www.openssl.org&#x2F;source&#x2F; OpenSSL官网没有提供windows版本的安装包，可以选择其他开源平台提供的工具。例如 http:&#x2F;&#x2F;slproweb.com&#x2F;products&#x2F;Win32OpenSSL.html1.1.2">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200411204027144.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2020041119404981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200411194152415.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200411194730271.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2023-05-23T05:44:01.798Z">
-<meta property="article:modified_time" content="2023-01-16T02:52:34.367Z">
+<meta property="og:image" content="e:\study\food\cooker\md%E5%9B%BE%E7%89%87\image-20221117150007609.png">
+<meta property="og:image" content="e:\study\food\cooker\md%E5%9B%BE%E7%89%87\image-20221117150535000.png">
+<meta property="og:image" content="e:\study\food\cooker\md%E5%9B%BE%E7%89%87\image-20221117163521351.png">
+<meta property="og:image" content="e:\study\food\cooker\md%E5%9B%BE%E7%89%87\image-20221117173259470.png">
+<meta property="og:image" content="e:\study\food\cooker\md%E5%9B%BE%E7%89%87\image-20221117173513322.png">
+<meta property="og:image" content="e:\study\food\cooker\md%E5%9B%BE%E7%89%87\image-20221117173800705.png">
+<meta property="og:image" content="e:\study\food\cooker\md%E5%9B%BE%E7%89%87\image-20221117202955848.png">
+<meta property="og:image" content="e:\study\food\cooker\md%E5%9B%BE%E7%89%87\image-20221118151008500.png">
+<meta property="article:published_time" content="2023-05-23T06:52:47.040Z">
+<meta property="article:modified_time" content="2023-01-31T08:42:03.711Z">
 <meta property="article:author" content="zhuangzhuang jiang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200411204027144.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="e:\study\food\cooker\md%E5%9B%BE%E7%89%87\image-20221117150007609.png">
   
     <link rel="alternative" href="/atom.xml" title="selfheart" type="application/atom+xml">
   
@@ -159,56 +163,99 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jvm总结" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-加解密" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-运行时数据区域（内存模型）"><a href="#1-运行时数据区域（内存模型）" class="headerlink" title="1.运行时数据区域（内存模型）"></a>1.运行时数据区域（内存模型）</h2><p>Java 内存区域和内存模型是不一样的东西：</p>
-<p><font color='red'>内存区域</font>是指 Jvm 运行时将数据分区域存储，强调对内存空间的划分。<br><font color='red'>内存模型</font>（Java Memory Model，简称 JMM ）是定义了线程和主内存之间的抽象关系，即 JMM 定义了 JVM 在计算机内存(RAM)中的工作方式，如果我们要想深入了解Java并发编程，就要先理解好Java内存模型。<br>主要的运行时数据如下：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200411204027144.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>更为详细的如下&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
-<p>JDK8 之前的内存区域图如下:</p>
-<p><img src="https://img-blog.csdnimg.cn/2020041119404981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>JDK8 之后的内存区域图如下:</p>
-<p><img src="https://img-blog.csdnimg.cn/20200411194152415.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>Java 8 中 PermGen 为什么被移出 HotSpot JVM 了？两个主要原因:</p>
-<p>由于 PermGen <font color='red'>内存</font>经常会<font color='red'>溢出</font>，引发恼人的 java.lang.OutOfMemoryError: PermGen，因此 JVM 的开发者希望这一块内存可以更灵活地被管理，不要再经常出现这样的 <font color='red'>OOM</font><br>移除 PermGen 可以促进 HotSpot JVM 与 JRockit VM 的融合，因为 JRockit 没有永久代。<br>根据上面的各种原因，PermGen 最终被移除，方法区移至 Metaspace，字符串常量移至 Java Heap。</p>
-<h3 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h3><p>程序计数器（Program Counter Register）是一块较小的内存空间，它可以看作是<font color='red'>当前线程所执行的字节码</font>的行号指示器。</p>
-<p>由于 <font color='red'>Java 虚拟机的多线程是通过线程轮流切换并分配处理器执行时间</font>的方式来实现的，在任何一个确定的时刻，一个处理器内核都只会执行一条线程中的指令。因此，为了线程切换后能恢复到正确的执行位置，<strong>每条线程都需要有一个独立的程序计数器</strong>，各条线程之间计数器互不影响，独立存储，我们称这类内存区域为“线程私有”的内存。</p>
-<p>如果线程正在执行的是一个<font color='cornflowerblue'> Java 方法</font>，这个计数器记录的是<font color='cornflowerblue'>正在执行的虚拟机字节码指令的地址</font>；<br>如果正在执行的是 <font color='cornflowerblue'>Native 方法</font>，这个计数器值则为<font color='cornflowerblue'>空</font>（Undefined）。<br>此内存区域是唯一一个在 Java 虚拟机规范中没有规定任何 OutOfMemoryError 情况的区域。</p>
-<h3 id="Java虚拟机栈"><a href="#Java虚拟机栈" class="headerlink" title="Java虚拟机栈"></a>Java虚拟机栈</h3><p>与程序计数器一样，Java 虚拟机栈（Java Virtual Machine Stacks）也是线程私有的，它的生命周期与线程相同。</p>
-<p>虚拟机栈描述的是 Java 方法执行的内存模型：<font color='cornflowerblue'>每个方法在执行的同时</font>都会创建一个<strong>栈帧</strong>（Stack Frame，是方法运行时的基础数据结构）用于存储局部变量表、操作数栈、动态链接、方法出口等信息。每一个方法从调用直至执行完成的过程，就对应着一个栈帧在虚拟机栈中入栈到出栈的过程。</p>
-<p>在活动线程中，只有位千栈顶的帧才是有效的，称为当前栈帧。正在执行的方法称为当前方法，栈帧是方法运行的基本结构。在执行引擎运行时，所有指令都只能针对当前栈帧进行操作。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200411194730271.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h4 id="局部变量表"><a href="#局部变量表" class="headerlink" title="局部变量表"></a>局部变量表</h4><p>局部变量表是存放<font color='cornflowerblue'>方法参数和局部变量</font>的区域。 局部变量没有准备阶段， 必须显式初始化。如果是非静态方法，则在 index[0] 位置上存储的是方法所属对象的实例引用，一个引用变量占 4 个字节，随后存储的是参数和局部变量。字节码指令中的 STORE 指令就是将操作栈中计算完成的局部变呈写回局部变量表的存储空间内。</p>
-<p>虚拟机栈规定了两种异常状况：如果线程请求的栈深度大于虚拟机所允许的深度，将抛出 StackOverflowError 异常；如果虚拟机栈可以动态扩展（当前大部分的 Java 虚拟机都可动态扩展），如果扩展时无法申请到足够的内存，就会抛出 OutOfMemoryError 异常。</p>
-<h4 id="操作栈"><a href="#操作栈" class="headerlink" title="操作栈"></a>操作栈</h4><p>操作栈是个初始状态为空的桶式结构栈。在方法执行过程中， 会有各种指令往栈中写入和提取信息。JVM 的执行引擎是基于栈的执行引擎， 其中的栈指的就是操作栈。字节码指令集的定义都是基于栈类型的，栈的深度在方法元信息的 stack 属性中。</p>
-<p>i++ 和 ++i 的区别：</p>
-<p>i++：从局部变量表取出 i 并压入操作栈，然后对局部变量表中的 i 自增 1，将操作栈栈顶值取出使用，最后，使用栈顶值更新局部变量表，如此线程从操作栈读到的是自增之前的值。<br>++i：先对局部变量表的 i 自增 1，然后取出并压入操作栈，再将操作栈栈顶值取出使用，最后，使用栈顶值更新局部变量表，线程从操作栈读到的是自增之后的值。<br>之前之所以说 i++ 不是原子操作，即使使用 volatile 修饰也不是线程安全，就是因为，可能 i 被从局部变量表（内存）取出，压入操作栈（寄存器），操作栈中自增，使用栈顶值更新局部变量表（寄存器更新写入内存），其中分为 3 步，volatile 保证可见性，保证每次从局部变量表读取的都是最新的值，但可能这 3 步可能被另一个线程的 3 步打断，产生数据互相覆盖问题，从而导致 i 的值比预期的小。</p>
-<h4 id="动态链接"><a href="#动态链接" class="headerlink" title="动态链接"></a>动态链接</h4><p>每个栈帧中包含一个在常量池中对当前方法的引用， 目的是支持方法调用过程的动态连接。</p>
-<h4 id="方法返回地址"><a href="#方法返回地址" class="headerlink" title="方法返回地址"></a>方法返回地址</h4><p>方法执行时有两种退出情况：正常退出，即正常执行到任何方法的返回字节码指令，如 RETURN、IRETURN、ARETURN 等；异常退出。</p>
-<p>无论何种退出情况，都将返回至方法当前被调用的位置。方法退出的过程相当于弹出当前栈帧，退出可能有三种方式：返回值压入上层调用栈帧&#x2F;异常信息抛给能够处理的栈帧&#x2F;PC计数器指向方法调用后的下一条指令。</p>
-<h3 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h3><p>本地方法栈（Native Method Stack）与虚拟机栈所发挥的作用是非常相似的，它们之间的区别不过是虚拟机栈为虚拟机执行 Java 方法（也就是字节码）服务，而本地方法栈则为虚拟机使用到的 Native 方法服务。Sun HotSpot 虚拟机直接就把本地方法栈和虚拟机栈合二为一。与虚拟机栈一样，本地方法栈区域也会抛出 StackOverflowError 和 OutOfMemoryError 异常。</p>
-<p>线程开始调用本地方法时，会进入 个不再受 JVM 约束的世界。本地方法可以通过 JNI(Java Native Interface)来访问虚拟机运行时的数据区，甚至可以调用寄存器，具有和 JVM 相同的能力和权限。 当大量本地方法出现时，势必会削弱 JVM 对系统的控制力，因为它的出错信息都比较黑盒。对内存不足的情况，本地方法栈还是会抛出 nativeheapOutOfMemory。</p>
-<p>JNI 类本地方法最著名的应该是 System.currentTimeMillis() ，JNI使 Java 深度使用操作系统的特性功能，复用非 Java 代码。 但是在项目过程中， 如果大量使用其他语言来实现 JNI , 就会丧失跨平台特性。</p>
-<p>Java堆</p>
-<p>对于大多数应用来说，Java 堆（Java Heap）是 Java 虚拟机所管理的内存中最大的一块。Java 堆是被所有线程共享的一块内存区域，在虚拟机启动时创建。此内存区域的唯一目的就是存放对象实例，几乎所有的对象实例都在这里分配内存。</p>
-<p>堆是垃圾收集器管理的主要区域，因此很多时候也被称做“GC堆”（Garbage Collected Heap）。从内存回收的角度来看，由于现在收集器基本都采用分代收集算法，所以 Java 堆中还可以细分为：新生代和老年代；再细致一点的有 Eden 空间、From Survivor 空间、To Survivor 空间等。从内存分配的角度来看，线程共享的 Java 堆中可能划分出多个线程私有的分配缓冲区（Thread Local Allocation Buffer,TLAB）。</p>
-<p>Java 堆可以处于物理上不连续的内存空间中，只要逻辑上是连续的即可，当前主流的虚拟机都是按照可扩展来实现的（通过 -Xmx 和 -Xms 控制）。如果在堆中没有内存完成实例分配，并且堆也无法再扩展时，将会抛出 OutOfMemoryError 异常。</p>
-<p>方法区</p>
-<p>方法区（Method Area）与 Java 堆一样，是各个线程共享的内存区域，它用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。虽然Java 虚拟机规范把方法区描述为堆的一个逻辑部分，但是它却有一个别名叫做 Non-Heap（非堆），目的应该是与 Java 堆区分开来。</p>
-<p>Java 虚拟机规范对方法区的限制非常宽松，除了和 Java 堆一样不需要连续的内存和可以选择固定大小或者可扩展外，还可以选择不实现垃圾收集。垃圾收集行为在这个区域是比较少出现的，其内存回收目标主要是针对常量池的回收和对类型的卸载。当方法区无法满足内存分配需求时，将抛出 OutOfMemoryError 异常。</p>
-<p>JDK8 之前，Hotspot 中方法区的实现是永久代（Perm），JDK8 开始使用元空间（Metaspace），以前永久代所有内容的字符串常量移至堆内存，其他内容移至元空间，元空间直接在本地内存分配。</p>
-<p>为什么要使用元空间取代永久代的实现？</p>
-<p>字符串存在永久代中，容易出现性能问题和内存溢出。<br>类及方法的信息等比较难确定其大小，因此对于永久代的大小指定比较困难，太小容易出现永久代溢出，太大则容易导致老年代溢出。<br>永久代会为 GC 带来不必要的复杂度，并且回收效率偏低。<br>将 HotSpot 与 JRockit 合二为一。<br>补充内容：</p>
-<p>运行时常量池<br>运行时常量池（Runtime Constant Pool）是方法区的一部分。Class 文件中除了有类的版本、字段、方法、接口等描述信息外，还有一项信息是常量池（Constant Pool Table），用于存放编译期生成的各种字面量和符号引用，这部分内容将在类加载后进入方法区的运行时常量池中存放。</p>
-<p>一般来说，除了保存 Class 文件中描述的符号引用外，还会把翻译出来的直接引用也存储在运行时常量池中。</p>
-<p>运行时常量池相对于 Class 文件常量池的另外一个重要特征是具备动态性，Java 语言并不要求常量一定只有编译期才能产生，也就是并非预置入 Class 文件中常量池的内容才能进入方法区运行时常量池，运行期间也可能将新的常量放入池中，这种特性被开发人员利用得比较多的便是 String 类的 intern() 方法。</p>
-<p>既然运行时常量池是方法区的一部分，自然受到方法区内存的限制，当常量池无法再申请到内存时会抛出 OutOfMemoryError 异常。</p>
-<p>直接内存<br>直接内存（Direct Memory）并不是虚拟机运行时数据区的一部分，也不是 Java 虚拟机规范中定义的内存区域。</p>
-<p>在 JDK 1.4 中新加入了 NIO，引入了一种基于通道（Channel）与缓冲区（Buffer）的 I&#x2F;O 方式，它可以使用 Native 函数库直接分配堆外内存，然后通过一个存储在 Java 堆中的 DirectByteBuffer 对象作为这块内存的引用进行操作。这样能在一些场景中显著提高性能，因为避免了在 Java 堆和 Native 堆中来回复制数据。</p>
-<p>显然，本机直接内存的分配不会受到 Java 堆大小的限制，但是，既然是内存，肯定还是会受到本机总内存（包括 RAM 以及 SWAP 区或者分页文件）大小以及处理器寻址空间的限制。服务器管理员在配置虚拟机参数时，会根据实际内存设置 -Xmx 等参数信息，但经常忽略直接内存，使得各个内存区域总和大于物理内存限制（包括物理的和操作系统级的限制），从而导致动态扩展时出现 OutOfMemoryError 异常。</p>
+        <center>加解密</center>
+
+<h2 id="1、openssl"><a href="#1、openssl" class="headerlink" title="1、openssl"></a>1、openssl</h2><h3 id="1-1、openssl下载"><a href="#1-1、openssl下载" class="headerlink" title="1.1、openssl下载"></a>1.1、openssl下载</h3><p>以下为Windows安装openssl示例：</p>
+<p>1.1.1 下载地址</p>
+<p>官方下载地址：<a target="_blank" rel="noopener" href="https://www.openssl.org/source/"> https://www.openssl.org/source/</a></p>
+<p>OpenSSL官网没有提供windows版本的安装包，可以选择其他开源平台提供的工具。例如 <a target="_blank" rel="noopener" href="http://slproweb.com/products/Win32OpenSSL.html">http://slproweb.com/products/Win32OpenSSL.html</a><br>1.1.2  其他开源平台提供的工具下载示例：</p>
+<p>选择140MB大一点的EXE格式，小点的没有openssl.cfg不能制作PFX格式证书（PKCS12）。</p>
+<p><img src="E:\study\food\cooker\md图片\image-20221117150007609.png" alt="image-20221117150007609"></p>
+<p>1.1.3　下载完成后直接运行，一路ｎｅｘｔ</p>
+<p>1.1.4　配一下环境变量</p>
+<p><img src="E:\study\food\cooker\md图片\image-20221117150535000.png" alt="image-20221117150535000"></p>
+<p>1.1.5　验证一下是否安装成功</p>
+<p><img src="E:\study\food\cooker\md图片\image-20221117163521351.png" alt="image-20221117163521351"></p>
+<h3 id="1-2-openssl制作pfs格式证书"><a href="#1-2-openssl制作pfs格式证书" class="headerlink" title="1.2　openssl制作ｐｆｓ格式证书"></a>1.2　openssl制作ｐｆｓ格式证书</h3><p>cer是公钥证书，里面包含公钥，生成的时候不需要输入密码加密；</p>
+<p>pfx是带有钥的证书，所以在生成的时候需要输入密码加密</p>
+<p>1.2.1　生成私钥template.key跟公钥template.cer，过期时间设置1000年</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">req -newkey rsa:2048 -nodes -keyout template.key -x509 -days 365000 -out template.cer</span><br></pre></td></tr></table></figure>
+
+<p><img src="E:\study\food\cooker\md图片\image-20221117173259470.png" alt="image-20221117173259470"></p>
+<p>此时在当前文件夹下会生成公钥私钥</p>
+<p>注意：提前将openssl.cfg（该文件在OpenSSL-Win64\bin\cnf中）放在当前文件夹下，否则会因找不到报错</p>
+<p><img src="E:\study\food\cooker\md图片\image-20221117173513322.png" alt="image-20221117173513322"></p>
+<p>1.2.1　生成pfx文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkcs12 -export -``in` `template.cer -inkey template.key -``out` `template.pfx</span><br></pre></td></tr></table></figure>
+
+<p><img src="E:\study\food\cooker\md图片\image-20221117173800705.png" alt="image-20221117173800705"></p>
+<p>pfx是带有钥的证书，所以在生成的时候需要输入密码加密，记住密码，后期要用。</p>
+<p>iOS上用的是pkcs8格式的公钥<br>openssl用的是pkcs1格式的公钥<br>知道私钥以后是可以导出公钥的，所以私钥一定要保证安全<br>知道公钥不可以导出私钥</p>
+<p>1.3 </p>
+<h2 id="2、常用加解密"><a href="#2、常用加解密" class="headerlink" title="2、常用加解密"></a>2、常用加解密</h2><h3 id="2-1、加密方式"><a href="#2-1、加密方式" class="headerlink" title="2.1、加密方式"></a>2.1、加密方式</h3><h4 id="2-1-1、加密方式主要有3种："><a href="#2-1-1、加密方式主要有3种：" class="headerlink" title="2.1.1、加密方式主要有3种："></a>2.1.1、加密方式主要有3种：</h4><p><strong>可逆</strong></p>
+<p>【对称加密】：symmetric，例如 AES、DES 等。</p>
+<p>【非对称加密】：asymmetric，例如 RSA、DSA 等。</p>
+<p><strong>不可逆</strong></p>
+<p>【摘要加密】：Digest&#x2F;Hash，例如 MD5、SHA-1、SHA-256、HMAC 等。</p>
+<h4 id="2-1-2、加解密思想："><a href="#2-1-2、加解密思想：" class="headerlink" title="2.1.2、加解密思想："></a>2.1.2、加解密思想：</h4><p>将一种排序好的二进制，转变为另一种排序的二进制。</p>
+<p>输入：二进制数据<br>输出：二进制数据</p>
+<p>注意：在加密后得到的是二进制数据，一般来说我们需要将其转变为更加容易阅读的十六进制范式，两种方式：</p>
+<p><code>Base64编码：源数据3个字节为一组, 转化为4个字符表示。</code><br><code>BigInteger转码：本质十六进制，源数据的1个字节为一组, 转为2个字符表示。</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String en = Base64.getEncoder().encodeToString( endoce );// 默认的2进制转16进制。【1】表示整数，不加可能得负值（结果出错）</span><br><span class="line">String encodeHex = new BigInteger(1,msg).toString(16);</span><br><span class="line"></span><br><span class="line">// 16进制数据转2进制</span><br><span class="line">new BigInteger(&quot;1f6f&quot;, 16).toString(2)</span><br></pre></td></tr></table></figure>
+
+<p>16进制一般针对无法显示的一些二进制进行显示，常用于：</p>
+<ol>
+<li>加密解密。</li>
+<li>编码转换。</li>
+<li>图片表现形式转换。</li>
+</ol>
+<p>Bin：Binary，二进制。<br>Oct：Octal，八进制。<br>Dec：Decimal，十进制。<br>Hex：Hexadecimal，十六进制。</p>
+<h3 id="2-2、非对称加密RSA"><a href="#2-2、非对称加密RSA" class="headerlink" title="2.2、非对称加密RSA"></a>2.2、非对称加密RSA</h3><h4 id="2-2-1简介"><a href="#2-2-1简介" class="headerlink" title="2.2.1简介"></a>2.2.1简介</h4><ul>
+<li><p><strong>公匙、私匙，常用的非对称加密方式为：</strong><br>RSA：由Ron Rivest，Adi Shamir，Leonard Adleman这三人共同发明，名字由为三人姓氏首字母大写。RSA加密算法基于一个十分简单的数论事实，即将两个大素数相乘十分容易，但想要对其乘积进行因式分解却极其困难，因此可以将乘积公开作为加密密钥。<br>DSA：Digital Signature Algorithm，数字签名算法，常用于签名。</p>
+</li>
+<li><p>某人可以向社会公布他的公匙，任何想发消息给他的人都得用公匙对消息进行加密，然后只有他可以用私匙解密对应消息。<br>非对称加密和对称加密都不能防止【中间人攻击】，应用2种：加密、签名。</p>
+</li>
+</ul>
+<h4 id="2-2-2-必要性说明"><a href="#2-2-2-必要性说明" class="headerlink" title="2.2.2 必要性说明"></a>2.2.2 必要性说明</h4><p> 非对称加密相较于对称加密速度慢、效率低，<font color='red'>实际开发中，非对称加密总是和对称加密一起使用</font>。</p>
+<ul>
+<li>小明生成一个随机的AES口令，然后用小红的公钥通过RSA加密这个口令，并发给小红。（ＡＥＳ是一种对称加密）</li>
+<li>小红用自己的RSA私钥解密得到AES口令。</li>
+<li>双方使用这个共享的AES口令用AES加密通信。</li>
+</ul>
+<h4 id="2-2-3-RSA加密"><a href="#2-2-3-RSA加密" class="headerlink" title="2.2.3　RSA加密"></a>2.2.3　RSA加密</h4><p>A用B的公钥加密后发给B，B收到后用B的私钥解密</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="comment">// 明文:</span></span><br><span class="line">        <span class="type">byte</span>[] plain = <span class="string">&quot;Hello, encrypt use RSA&quot;</span>.getBytes(<span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">        <span class="comment">// 创建公钥／私钥对:</span></span><br><span class="line">        <span class="type">Person</span> <span class="variable">alice</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&quot;Alice&quot;</span>);</span><br><span class="line">        <span class="comment">// 用Alice的公钥加密:</span></span><br><span class="line">        <span class="type">byte</span>[] pk = alice.getPublicKey();</span><br><span class="line">        System.out.println(String.format(<span class="string">&quot;public key: %x&quot;</span>, <span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="number">1</span>, pk)));</span><br><span class="line">        <span class="type">byte</span>[] encrypted = alice.encrypt(plain);</span><br><span class="line">        System.out.println(String.format(<span class="string">&quot;encrypted: %x&quot;</span>, <span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="number">1</span>, encrypted)));</span><br><span class="line">        <span class="comment">// 用Alice的私钥解密:</span></span><br><span class="line">        <span class="type">byte</span>[] sk = alice.getPrivateKey();</span><br><span class="line">        System.out.println(String.format(<span class="string">&quot;private key: %x&quot;</span>, <span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="number">1</span>, sk)));</span><br><span class="line">        <span class="type">byte</span>[] decrypted = alice.decrypt(encrypted);</span><br><span class="line">        System.out.println(<span class="keyword">new</span> <span class="title class_">String</span>(decrypted, <span class="string">&quot;UTF-8&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="comment">// 私钥:</span></span><br><span class="line">    PrivateKey sk;</span><br><span class="line">    <span class="comment">// 公钥:</span></span><br><span class="line">    PublicKey pk;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Person</span><span class="params">(String name)</span> <span class="keyword">throws</span> GeneralSecurityException &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="comment">// 生成公钥／私钥对:</span></span><br><span class="line">        <span class="type">KeyPairGenerator</span> <span class="variable">kpGen</span> <span class="operator">=</span> KeyPairGenerator.getInstance(<span class="string">&quot;RSA&quot;</span>);</span><br><span class="line">        kpGen.initialize(<span class="number">1024</span>);</span><br><span class="line">        <span class="type">KeyPair</span> <span class="variable">kp</span> <span class="operator">=</span> kpGen.generateKeyPair();</span><br><span class="line">        <span class="built_in">this</span>.sk = kp.getPrivate();</span><br><span class="line">        <span class="built_in">this</span>.pk = kp.getPublic();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 把私钥导出为字节</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">byte</span>[] getPrivateKey() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.sk.getEncoded();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 把公钥导出为字节</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">byte</span>[] getPublicKey() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.pk.getEncoded();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 用公钥加密:</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">byte</span>[] encrypt(<span class="type">byte</span>[] message) <span class="keyword">throws</span> GeneralSecurityException &#123;</span><br><span class="line">        <span class="type">Cipher</span> <span class="variable">cipher</span> <span class="operator">=</span> Cipher.getInstance(<span class="string">&quot;RSA&quot;</span>);</span><br><span class="line">        cipher.init(Cipher.ENCRYPT_MODE, <span class="built_in">this</span>.pk);</span><br><span class="line">        <span class="keyword">return</span> cipher.doFinal(message);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 用私钥解密:</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">byte</span>[] decrypt(<span class="type">byte</span>[] input) <span class="keyword">throws</span> GeneralSecurityException &#123;</span><br><span class="line">        <span class="type">Cipher</span> <span class="variable">cipher</span> <span class="operator">=</span> Cipher.getInstance(<span class="string">&quot;RSA&quot;</span>);</span><br><span class="line">        cipher.init(Cipher.DECRYPT_MODE, <span class="built_in">this</span>.sk);</span><br><span class="line">        <span class="keyword">return</span> cipher.doFinal(input);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-4-RSA签名"><a href="#2-2-4-RSA签名" class="headerlink" title="2.2.4  RSA签名"></a>2.2.4  RSA签名</h4><p>发布者发布消息：</p>
+<p>用自己的私钥加密自己的消息</p>
+<p>私匙加密、公匙解密。</p>
+<p>​	发布者在公布自己的消息时，需要公布两份东西，一份是<font color='red'>数据</font>，另一份就是<font color='red'>签名</font>。<br>​	验证时，先将<font color='cornflowerblue'>数据经过散列</font>得到<font color='cornflowerblue'>Hash1</font>，再<font color='cornflowerblue'>将签名公匙解密</font>得到<font color='cornflowerblue'>Hash2</font>，两者进行比对。<br>​	事先经过hash散列的好处就是缩短了要加密的数据和生成的签名数据，进一步减轻了带宽压力。</p>
+<p>常用的数字签名算法有3种，实际上就是指定某种哈希算法进行RSA签名的方式。<br>    MD5withRSA<br>    SHA1withRSA<br>    SHA256withRSA<br><img src="E:\study\food\cooker\md图片\image-20221117202955848.png" alt="image-20221117202955848"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 生成RSA公钥、私钥</span></span><br><span class="line"><span class="type">KeyPairGenerator</span> <span class="variable">kpGen</span> <span class="operator">=</span> KeyPairGenerator.getInstance(<span class="string">&quot;RSA&quot;</span>);</span><br><span class="line">kpGen.initialize(<span class="number">1024</span>);</span><br><span class="line"><span class="type">KeyPair</span>    <span class="variable">kp</span> <span class="operator">=</span> kpGen.generateKeyPair();</span><br><span class="line"><span class="type">PrivateKey</span> <span class="variable">sk</span> <span class="operator">=</span> kp.getPrivate();</span><br><span class="line"><span class="type">PublicKey</span>  <span class="variable">pk</span> <span class="operator">=</span> kp.getPublic();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 待签名的消息</span></span><br><span class="line"><span class="type">byte</span>[] message = <span class="string">&quot;中文&quot;</span>.getBytes(StandardCharsets.UTF_8);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用私钥签名</span></span><br><span class="line"><span class="type">Signature</span> <span class="variable">signSk</span> <span class="operator">=</span> Signature.getInstance(<span class="string">&quot;SHA1withRSA&quot;</span>);</span><br><span class="line">signSk.initSign(sk);</span><br><span class="line">signSk.update(message);</span><br><span class="line"><span class="type">byte</span>[] signed = signSk.sign();</span><br><span class="line">System.out.println(String.format(<span class="string">&quot;signature: %x&quot;</span>, <span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="number">1</span>, signed)));</span><br><span class="line">                   </span><br><span class="line"><span class="comment">// 用公钥验证，最后得到的是Boolean值，判断真假。</span></span><br><span class="line"><span class="type">Signature</span> <span class="variable">signPk</span> <span class="operator">=</span> Signature.getInstance(<span class="string">&quot;SHA1withRSA&quot;</span>);</span><br><span class="line">signPk.initVerify(pk);</span><br><span class="line">signPk.update(message);</span><br><span class="line"><span class="type">boolean</span> <span class="variable">valid</span> <span class="operator">=</span> signPk.verify(signed);</span><br><span class="line">System.out.println(<span class="string">&quot;valid? &quot;</span> + valid);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-5、摘要加密Hash"><a href="#2-2-5、摘要加密Hash" class="headerlink" title="2.2.5、摘要加密Hash"></a>2.2.5、摘要加密Hash</h4><p><strong>简介</strong></p>
+<p>​	<font color='red'>哈希严格来说只是一种摘要算法Digest而不是加密算法。</font><br><strong>特点：</strong><br>​	对于任意输入，都输出固定长度的值。<br>​	“不可逆”算法。<br><strong>应用领域：</strong><br>​	加密，MD5加盐散列。<br>​	数据完整性验证。<br>​	加盐思想：为什么加盐能够防止黑客通过彩虹表破解？</p>
+<pre><code>         因为在没有加盐时，黑客拥有一张通过大量时间计算得出来的“彩虹表1”，可以轻易的碰撞到原始密码。当我们加盐之后，由于盐值可以是随机的（比如盐				值			为	用户名），此时黑客就需要重新计算大量数据，这种计算是极其耗费时间的。
+</code></pre>
+<p>Java原生哈希算法：输入任意字符，输出固定4字节int型整数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. hash 后获得十进制数</span></span><br><span class="line"><span class="type">Integer</span> <span class="variable">code</span> <span class="operator">=</span> <span class="string">&quot;Java&quot;</span>.hashCode();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 将十进制数转为十六进制数</span></span><br><span class="line"><span class="type">String</span>  <span class="variable">hashString</span>    <span class="operator">=</span> Integer.toHexString(code);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 输出(0x)231e42，4字符 = 32位 = 长度为2+6的十六进制数。</span></span><br><span class="line">System.out.println(hashString);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>常见Hash算法</strong></p>
+<p><img src="E:\study\food\cooker\md图片\image-20221118151008500.png" alt="image-20221118151008500"></p>
+<p>MD5占内存128位，32字符。<br><font color='red'>MD5与SHA-1算法现已可破解</font>，不推荐敏感程序使用（MD5更快、SHA-1更安全）。<br>SHA算法可分为3代，分别为：<br>SHA-1系列：SHA-1。<br>SHA-2系列：SHA-224、SHA-256、SHA-384、SHA-512、SHA-512&#x2F;224、SHA-512&#x2F;256。<br>SHA-3系列：SHA3-224、SHA3-256、SHA3-384、SHA3-512。</p>
+<p><strong>MD5加密：不加盐版</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取MessageDigest实例:</span></span><br><span class="line"><span class="type">MessageDigest</span> <span class="variable">md</span> <span class="operator">=</span> MessageDigest.getInstance(<span class="string">&quot;MD5&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 反复调用update输入数据:</span></span><br><span class="line">md.update(<span class="string">&quot;中&quot;</span>.getBytes(<span class="string">&quot;UTF-8&quot;</span>));</span><br><span class="line">md.update(<span class="string">&quot;文&quot;</span>.getBytes(<span class="string">&quot;UTF-8&quot;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// a7bac2239fcdcb3a067903d8077c4a07</span></span><br><span class="line"><span class="type">byte</span>[] result = md.digest(); </span><br><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="number">1</span>, result).toString(<span class="number">16</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>MD5加密：加盐版。</strong></p>
+<p>加盐本质：拼接字符串再加密。</p>
+<p>【原生】：直接拼接字符串，将 key 与 原文拼接一起再 encry。</p>
+<p>【Hmac算法】：Hash-based Message Authentication Code，Java原生类，一种更安全的哈希算法，适用于任何可迭代的哈希算法，例如md5、SHA-1等。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">KeyGenerator</span> <span class="variable">keyGen</span> <span class="operator">=</span> KeyGenerator.getInstance(<span class="string">&quot;HmacMD5&quot;</span>);</span><br><span class="line"><span class="type">SecretKey</span> <span class="variable">key</span> <span class="operator">=</span> keyGen.generateKey();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 打印随机生成的key:</span></span><br><span class="line"><span class="type">byte</span>[] skey = key.getEncoded();</span><br><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="number">1</span>, skey).toString(<span class="number">16</span>));</span><br><span class="line"></span><br><span class="line"><span class="type">Mac</span> <span class="variable">mac</span> <span class="operator">=</span> Mac.getInstance(<span class="string">&quot;HmacMD5&quot;</span>);</span><br><span class="line">mac.init(key);</span><br><span class="line">mac.update(<span class="string">&quot;HelloWorld&quot;</span>.getBytes(<span class="string">&quot;UTF-8&quot;</span>));</span><br><span class="line"><span class="type">byte</span>[] result = mac.doFinal();</span><br><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="number">1</span>, result).toString(<span class="number">16</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -288,7 +335,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/05/23/jvm%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/05/23/%E5%8A%A0%E8%A7%A3%E5%AF%86/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -300,16 +347,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-  
-    <a href="/2023/05/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
